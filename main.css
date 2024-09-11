@@ -1,0 +1,278 @@
+/* Reset e Box-Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Geral */
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #007bff;
+    border-bottom: 1px solid #ccc;
+    color: aliceblue;
+    padding: 8px;
+    margin-bottom: 30px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container h1 {
+    font-style: italic;
+}
+
+header .container nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header .container nav ul li a {
+    margin-left: 8px;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+/* Estrutura da Página */
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.container img {
+    max-width: 100%;
+    width: 520px;
+    height: auto;
+    grid-row: span 2;
+}
+
+.container h2 {
+    color: #007bff;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #007bff;
+    width: 100%;
+}
+
+.container p {
+    padding-top: 26px;
+}
+
+/* Títulos e Texto */
+h2,
+p {
+    margin: 0 auto;
+}
+
+/* Grid para Produtos */
+.grid-container,
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.produtos-title {
+    color: #007bff;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #007bff;
+    width: 100%;
+    text-align: start;
+    margin: 40px auto;
+    grid-column: 1 / -1;
+}
+
+/* Artigos */
+article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Botões */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        /* Duas colunas lado a lado */
+    }
+
+    #sobre {
+        /* Ajustes específicos para a seção "Sobre" */
+    }
+
+    #produtos {
+        /* Ajustes específicos para a seção "Produtos" */
+    }
+
+    .container {
+        padding: 0 16px;
+        /* Adiciona padding ao container */
+    }
+
+    .container img {
+        max-width: 100%;
+        width: 420px;
+        /* Garante que as imagens se ajustem ao contêiner */
+        height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        /* Ajusta o grid dos produtos */
+    }
+
+    .produtos-title {
+        margin-top: 40px;
+    }
+
+    article {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    article img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-top: 8px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+}
+
+@media (max-width: 640px) {
+
+    /* Container Geral */
+    .container {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 16px 16px;
+        /* Adicionando padding para evitar que o conteúdo fique colado nas bordas */
+    }
+
+    /* Cabeçalho */
+    header .container {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre o h1 e o nav */
+    align-items: center; /* Alinha verticalmente o h1 e o nav */
+}
+
+header .container h1 {
+    font-style: italic;
+    font-size: 1.75rem; /* Ajuste para garantir boa visibilidade */
+}
+
+header .container nav {
+    display: flex; /* Certifica que os itens de navegação são exibidos em linha */
+}
+
+header .container nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .container nav ul li {
+    margin-left: 16px; /* Espaçamento entre os itens do menu */
+}
+
+header .container nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+    /* Estrutura da Página */
+    .container {
+        display: block;
+        /* Alterado para bloco para melhor disposição em dispositivos móveis */
+        padding: 0;
+    }
+
+    .container img {
+        margin-bottom: 16px;
+        /* Adicionando margem inferior para espaçamento */
+    }
+
+    .container h2 {
+        font-size: 1.25rem;
+        /* Ajuste de tamanho para dispositivos móveis */
+    }
+
+    .container p {
+        padding-top: 16px;
+        margin-bottom: 8px;
+        /* Ajustando padding para dispositivos móveis */
+    }
+
+    /* Grid para Produtos */
+    .grid-container,
+    #produtos {
+        grid-template-columns: 1fr;
+        /* Alterado para coluna única em dispositivos móveis */
+        gap: 16px;
+        /* Ajuste do gap para dispositivos móveis */
+    }
+
+    .produtos-title {
+        margin: 20px 0;
+        /* Ajuste da margem para dispositivos móveis */
+    }
+
+    /* Botões */
+    button {
+        padding: 10px;
+        font-size: 1rem;
+        /* Ajuste de tamanho para dispositivos móveis */
+    }
+}
